@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm storybook",
+    "dev": "npm run storybook",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write --ignore-unknown .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "chromatic": "npx chromatic --project-token=chpt_e498786fa73c6cb"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -47,6 +48,7 @@
     "@vitejs/plugin-react": "4.3.0",
     "autoprefixer": "10.4.19",
     "axe-playwright": "2.0.1",
+    "chromatic": "^11.10.3",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "eslint": "8.57.0",
